@@ -1,0 +1,26 @@
+  <div class="container">
+    <br>
+    <div class="form-group">
+      <Label class="digite o nome"> Digite o nome do curso </Label>
+    <input type="text" class="form-control" name="teste" [(ngModel)] = "nome" placeholder="Insira o curso">
+  </div> 
+    <br>
+      <button class="btn btn-info" (click) = "add()" [disabled] = "!nome">Adicionar</button>
+  <!-- <p class="alert alert-danger"></p> -->
+   <p class="alert alert-dark">Lista de Cursos:</p>
+ <table class="table">
+   <tr>
+     <td *ngFor = "let c of cursos">{{ c }}</td>
+   </tr>
+ </table>
+   <hr>
+    <table class="table">
+      <tr *ngFor = " let o of vetor, let i = index ">
+        <td>{{i}}</td>
+        <td>{{ o }}</td>
+        <td><button class='btn btn-outline-warning' (click)="remover(i)">X</button></td>
+      </tr>
+    </table>
+    <hr>
+  </div>
+  
